@@ -12,6 +12,8 @@ __all__ = ['get_version',
 def st_nlink_type():
     if sys.platform == "darwin":
         return "short"
+    if sys.platform == 'linux2':
+        return "long"
     return "long long"
 
 
